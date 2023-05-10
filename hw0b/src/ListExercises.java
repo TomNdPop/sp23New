@@ -28,12 +28,29 @@ public class ListExercises {
 
     /** Returns a list containing the common item of the two given lists */
     public static List<Integer> common(List<Integer> L1, List<Integer> L2) {
-        return null;
+        List<Integer> common = new ArrayList<Integer>();
+        for(Integer elem1 : L1){
+            for(Integer elem2 : L2){
+                if(elem1 == elem2){
+                    common.add(elem1);
+                }
+            }
+        }
+        return common;
     }
 
 
     /** Returns the number of occurrences of the given character in a list of strings. */
     public static int countOccurrencesOfC(List<String> words, char c) {
-        return 0;
+        int count = 0;
+
+        for(String elem : words){
+            for(char ch : elem.toCharArray()){
+                if(c==ch){
+                    count+=1;
+                }
+            }
+        }
+        return count;
     }
 }
