@@ -1,14 +1,28 @@
 import java.util.List;
+import java.util.ArrayList;
 
 public class ListExercises {
 
     /** Returns the total sum in a list of integers */
 	public static int sum(List<Integer> L) {
-        return 0;
+        int total = 0;
+        for(Integer elem : L){
+            total += elem;
+        }
+        return total;
     }
 
     /** Returns a list containing the even numbers of the given list */
     public static List<Integer> evens(List<Integer> L) {
+        List<Integer> evenCommon = new ArrayList<Integer>();
+        for(Integer elem : L){
+            if(elem%2 ==0){
+                evenCommon.add(elem);
+            }
+            else
+                continue;
+        }
+        return evenCommon;
         return null;
     }
 
